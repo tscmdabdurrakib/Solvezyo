@@ -9,24 +9,33 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
-// Debug: Log environment variables (remove in production)
+// Debug: Log environment variables
 console.log('Firebase Config Check:', {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY ? '✓ Set' : '✗ Missing',
   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID ? '✓ Set' : '✗ Missing',
   appId: import.meta.env.VITE_FIREBASE_APP_ID ? '✓ Set' : '✗ Missing',
 });
 
-// Validate configuration
-if (!import.meta.env.VITE_FIREBASE_API_KEY || 
-    !import.meta.env.VITE_FIREBASE_PROJECT_ID || 
-    !import.meta.env.VITE_FIREBASE_APP_ID) {
-  console.error('❌ Firebase configuration is incomplete. Please check your .env file.');
-  console.error('Required variables: VITE_FIREBASE_API_KEY, VITE_FIREBASE_PROJECT_ID, VITE_FIREBASE_APP_ID');
+// Initialize Firebase only if all required env vars are present
+let app = null;
+let auth = null;
+
+const hasAllFirebaseVars = import.meta.env.VITE_FIREBASE_API_KEY && 
+                           import.meta.env.VITE_FIREBASE_PROJECT_ID && 
+                           import.meta.env.VITE_FIREBASE_APP_ID;
+
+if (hasAllFirebaseVars) {
+  try {
+    app = initializeApp(firebaseConfig);
+    auth = getAuth(app);
+    console.log('✅ Firebase initialized successfully');
+  } catch (error) {
+    console.error('❌ Firebase initialization failed:', error);
+  }
+} else {
+  console.warn('⚠️ Firebase not configured - Auth features will be limited');
+  console.warn('Set VITE_FIREBASE_* variables in .env or deployment environment');
 }
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-// Initialize Firebase Authentication and get a reference to the service
-export const auth = getAuth(app);
+export { auth };
 export default app;
