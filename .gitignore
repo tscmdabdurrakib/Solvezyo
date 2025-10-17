@@ -15,3 +15,5 @@ npm-debug.log*
 /tmp/logs/
 # Build analysis
 bundle-analysis.html
+# Serve config (local testing only)
+serve.json
