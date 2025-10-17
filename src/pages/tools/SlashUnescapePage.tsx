@@ -1,0 +1,99 @@
+import { useEffect } from "react";
+import { ArrowLeft } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "wouter";
+import SlashUnescape from "@/tools/text-string/slash-unescape/index";
+
+export default function SlashUnescapePage() {
+  useEffect(() => {
+    document.title = "Slash Unescape | Remove Escape Characters from Text - Solvezyo";
+  }, []);
+  
+  return (
+    <>
+      <div className="container max-w-5xl mx-auto py-6 md:py-10">
+        <div className="mb-8 text-center">
+          <Link href="/" data-testid="link-back-home">
+            <Button variant="ghost" className="p-0 mb-2 h-auto mx-auto" asChild>
+              <div className="flex items-center text-muted-foreground text-sm font-normal hover:text-primary">
+                <ArrowLeft className="mr-1 h-3.5 w-3.5" />
+                <span>Back to home</span>
+              </div>
+            </Button>
+          </Link>
+          
+          <div className="flex items-center justify-center space-x-2 mb-1">
+            <Link href="/category/text-string" data-testid="link-category">
+              <Badge variant="outline" className="text-xs font-medium">
+                Text & String Tools
+              </Badge>
+            </Link>
+          </div>
+          
+          <h1 className="text-3xl md:text-4xl font-bold mb-2">Slash Unescape</h1>
+          <p className="text-lg text-muted-foreground">Remove escape slashes and convert to normal text</p>
+        </div>
+
+        <div className="flex justify-center mb-10">
+          <SlashUnescape />
+        </div>
+
+        <div className="max-w-4xl mx-auto mb-10">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xl">What is Slash Unescaping?</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground">
+                Slash unescaping reverses the escape sequence process, converting escape codes back to their actual characters. This is useful when reading data from JSON, processing string literals from code, or converting escaped text back to its readable format.
+              </p>
+              <div className="space-y-2">
+                <h3 className="font-semibold text-sm">Common Conversions:</h3>
+                <ul className="list-disc list-inside text-muted-foreground space-y-1 text-sm">
+                  <li>\n → Newline (creates actual line break)</li>
+                  <li>\t → Tab (creates actual tab spacing)</li>
+                  <li>\r → Carriage return</li>
+                  <li>\" → Double quote character</li>
+                  <li>\' → Single quote character</li>
+                  <li>\\ → Single backslash</li>
+                </ul>
+              </div>
+              <div className="space-y-2">
+                <h3 className="font-semibold text-sm">Use Cases:</h3>
+                <ul className="list-disc list-inside text-muted-foreground space-y-1 text-sm">
+                  <li>Reading escaped JSON strings</li>
+                  <li>Processing escaped code snippets</li>
+                  <li>Converting string literals to readable text</li>
+                  <li>Extracting actual content from escaped data</li>
+                </ul>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+        
+        <div className="mt-12 max-w-4xl mx-auto">
+          <h2 className="text-xl font-bold mb-4 text-center">Related Tools</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <Link href="/tools/slash-escape" data-testid="link-related-slash-escape">
+              <Button variant="outline" className="w-full justify-start h-auto py-2">
+                Slash Escape
+              </Button>
+            </Link>
+            <Link href="/tools/url-decode" data-testid="link-related-url-decode">
+              <Button variant="outline" className="w-full justify-start h-auto py-2">
+                URL Decode
+              </Button>
+            </Link>
+            <Link href="/tools/html-decode" data-testid="link-related-html-decode">
+              <Button variant="outline" className="w-full justify-start h-auto py-2">
+                HTML Decode
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

@@ -1,0 +1,812 @@
+[
+  {
+    "country": "United States",
+    "currency": {
+      "code": "USD",
+      "symbol": "$"
+    },
+    "tax_years": ["2023", "2022"],
+    "filing_statuses": ["Single", "Married Filing Jointly", "Married Filing Separately", "Head of Household"],
+    "states": [
+      {
+        "name": "Alabama",
+        "tax_brackets": [
+          { "rate": 0.02, "up_to": 500 },
+          { "rate": 0.04, "up_to": 3000 },
+          { "rate": 0.05, "up_to": null }
+        ]
+      }
+    ],
+    "federal_tax": {
+      "2023": {
+        "Single": [
+          { "rate": 0.10, "up_to": 11000 },
+          { "rate": 0.12, "up_to": 44725 },
+          { "rate": 0.22, "up_to": 95375 },
+          { "rate": 0.24, "up_to": 182100 },
+          { "rate": 0.32, "up_to": 231250 },
+          { "rate": 0.35, "up_to": 578125 },
+          { "rate": 0.37, "up_to": null }
+        ]
+      }
+    },
+    "social_security_rate": 0.062,
+    "medicare_rate": 0.0145
+  },
+  {
+    "country": "Afghanistan",
+    "currency": { "code": "AFN", "symbol": "؋" }
+  },
+  {
+    "country": "Albania",
+    "currency": { "code": "ALL", "symbol": "L" }
+  },
+  {
+    "country": "Algeria",
+    "currency": { "code": "DZD", "symbol": "د.ج" }
+  },
+  {
+    "country": "Andorra",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "Angola",
+    "currency": { "code": "AOA", "symbol": "Kz" }
+  },
+  {
+    "country": "Antigua and Barbuda",
+    "currency": { "code": "XCD", "symbol": "$" }
+  },
+  {
+    "country": "Argentina",
+    "currency": { "code": "ARS", "symbol": "$" }
+  },
+  {
+    "country": "Armenia",
+    "currency": { "code": "AMD", "symbol": "֏" }
+  },
+  {
+    "country": "Australia",
+    "currency": { "code": "AUD", "symbol": "$" }
+  },
+  {
+    "country": "Austria",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "Azerbaijan",
+    "currency": { "code": "AZN", "symbol": "₼" }
+  },
+  {
+    "country": "Bahamas",
+    "currency": { "code": "BSD", "symbol": "$" }
+  },
+  {
+    "country": "Bahrain",
+    "currency": { "code": "BHD", "symbol": ".د.ب" }
+  },
+  {
+    "country": "Bangladesh",
+    "currency": { "code": "BDT", "symbol": "৳" }
+  },
+  {
+    "country": "Barbados",
+    "currency": { "code": "BBD", "symbol": "$" }
+  },
+  {
+    "country": "Belarus",
+    "currency": { "code": "BYN", "symbol": "Br" }
+  },
+  {
+    "country": "Belgium",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "Belize",
+    "currency": { "code": "BZD", "symbol": "BZ$" }
+  },
+  {
+    "country": "Benin",
+    "currency": { "code": "XOF", "symbol": "CFA" }
+  },
+  {
+    "country": "Bhutan",
+    "currency": { "code": "BTN", "symbol": "Nu." }
+  },
+  {
+    "country": "Bolivia",
+    "currency": { "code": "BOB", "symbol": "Bs." }
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "currency": { "code": "BAM", "symbol": "KM" }
+  },
+  {
+    "country": "Botswana",
+    "currency": { "code": "BWP", "symbol": "P" }
+  },
+  {
+    "country": "Brazil",
+    "currency": { "code": "BRL", "symbol": "R$" }
+  },
+  {
+    "country": "Brunei",
+    "currency": { "code": "BND", "symbol": "$" }
+  },
+  {
+    "country": "Bulgaria",
+    "currency": { "code": "BGN", "symbol": "лв" }
+  },
+  {
+    "country": "Burkina Faso",
+    "currency": { "code": "XOF", "symbol": "CFA" }
+  },
+  {
+    "country": "Burundi",
+    "currency": { "code": "BIF", "symbol": "FBu" }
+  },
+  {
+    "country": "Cabo Verde",
+    "currency": { "code": "CVE", "symbol": "Esc" }
+  },
+  {
+    "country": "Cambodia",
+    "currency": { "code": "KHR", "symbol": "៛" }
+  },
+  {
+    "country": "Cameroon",
+    "currency": { "code": "XAF", "symbol": "FCFA" }
+  },
+  {
+    "country": "Canada",
+    "currency": { "code": "CAD", "symbol": "$" }
+  },
+  {
+    "country": "Central African Republic",
+    "currency": { "code": "XAF", "symbol": "FCFA" }
+  },
+  {
+    "country": "Chad",
+    "currency": { "code": "XAF", "symbol": "FCFA" }
+  },
+  {
+    "country": "Chile",
+    "currency": { "code": "CLP", "symbol": "$" }
+  },
+  {
+    "country": "China",
+    "currency": { "code": "CNY", "symbol": "¥" }
+  },
+  {
+    "country": "Colombia",
+    "currency": { "code": "COP", "symbol": "$" }
+  },
+  {
+    "country": "Comoros",
+    "currency": { "code": "KMF", "symbol": "CF" }
+  },
+  {
+    "country": "Congo, Democratic Republic of the",
+    "currency": { "code": "CDF", "symbol": "FC" }
+  },
+  {
+    "country": "Congo, Republic of the",
+    "currency": { "code": "XAF", "symbol": "FCFA" }
+  },
+  {
+    "country": "Costa Rica",
+    "currency": { "code": "CRC", "symbol": "₡" }
+  },
+  {
+    "country": "Croatia",
+    "currency": { "code": "HRK", "symbol": "kn" }
+  },
+  {
+    "country": "Cuba",
+    "currency": { "code": "CUP", "symbol": "₱" }
+  },
+  {
+    "country": "Cyprus",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "Czech Republic",
+    "currency": { "code": "CZK", "symbol": "Kč" }
+  },
+  {
+    "country": "Denmark",
+    "currency": { "code": "DKK", "symbol": "kr" }
+  },
+  {
+    "country": "Djibouti",
+    "currency": { "code": "DJF", "symbol": "Fdj" }
+  },
+  {
+    "country": "Dominica",
+    "currency": { "code": "XCD", "symbol": "$" }
+  },
+  {
+    "country": "Dominican Republic",
+    "currency": { "code": "DOP", "symbol": "RD$" }
+  },
+  {
+    "country": "Ecuador",
+    "currency": { "code": "USD", "symbol": "$" }
+  },
+  {
+    "country": "Egypt",
+    "currency": { "code": "EGP", "symbol": "£" }
+  },
+  {
+    "country": "El Salvador",
+    "currency": { "code": "USD", "symbol": "$" }
+  },
+  {
+    "country": "Equatorial Guinea",
+    "currency": { "code": "XAF", "symbol": "FCFA" }
+  },
+  {
+    "country": "Eritrea",
+    "currency": { "code": "ERN", "symbol": "Nfk" }
+  },
+  {
+    "country": "Estonia",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "Eswatini",
+    "currency": { "code": "SZL", "symbol": "L" }
+  },
+  {
+    "country": "Ethiopia",
+    "currency": { "code": "ETB", "symbol": "Br" }
+  },
+  {
+    "country": "Fiji",
+    "currency": { "code": "FJD", "symbol": "$" }
+  },
+  {
+    "country": "Finland",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "France",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "Gabon",
+    "currency": { "code": "XAF", "symbol": "FCFA" }
+  },
+  {
+    "country": "Gambia",
+    "currency": { "code": "GMD", "symbol": "D" }
+  },
+  {
+    "country": "Georgia",
+    "currency": { "code": "GEL", "symbol": "₾" }
+  },
+  {
+    "country": "Germany",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "Ghana",
+    "currency": { "code": "GHS", "symbol": "₵" }
+  },
+  {
+    "country": "Greece",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "Grenada",
+    "currency": { "code": "XCD", "symbol": "$" }
+  },
+  {
+    "country": "Guatemala",
+    "currency": { "code": "GTQ", "symbol": "Q" }
+  },
+  {
+    "country": "Guinea",
+    "currency": { "code": "GNF", "symbol": "FG" }
+  },
+  {
+    "country": "Guinea-Bissau",
+    "currency": { "code": "XOF", "symbol": "CFA" }
+  },
+  {
+    "country": "Guyana",
+    "currency": { "code": "GYD", "symbol": "$" }
+  },
+  {
+    "country": "Haiti",
+    "currency": { "code": "HTG", "symbol": "G" }
+  },
+  {
+    "country": "Honduras",
+    "currency": { "code": "HNL", "symbol": "L" }
+  },
+  {
+    "country": "Hungary",
+    "currency": { "code": "HUF", "symbol": "Ft" }
+  },
+  {
+    "country": "Iceland",
+    "currency": { "code": "ISK", "symbol": "kr" }
+  },
+  {
+    "country": "India",
+    "currency": { "code": "INR", "symbol": "₹" }
+  },
+  {
+    "country": "Indonesia",
+    "currency": { "code": "IDR", "symbol": "Rp" }
+  },
+  {
+    "country": "Iran",
+    "currency": { "code": "IRR", "symbol": "﷼" }
+  },
+  {
+    "country": "Iraq",
+    "currency": { "code": "IQD", "symbol": "ع.د" }
+  },
+  {
+    "country": "Ireland",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "Israel",
+    "currency": { "code": "ILS", "symbol": "₪" }
+  },
+  {
+    "country": "Italy",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "Jamaica",
+    "currency": { "code": "JMD", "symbol": "J$" }
+  },
+  {
+    "country": "Japan",
+    "currency": { "code": "JPY", "symbol": "¥" }
+  },
+  {
+    "country": "Jordan",
+    "currency": { "code": "JOD", "symbol": "JD" }
+  },
+  {
+    "country": "Kazakhstan",
+    "currency": { "code": "KZT", "symbol": "₸" }
+  },
+  {
+    "country": "Kenya",
+    "currency": { "code": "KES", "symbol": "KSh" }
+  },
+  {
+    "country": "Kiribati",
+    "currency": { "code": "AUD", "symbol": "$" }
+  },
+  {
+    "country": "Kuwait",
+    "currency": { "code": "KWD", "symbol": "KD" }
+  },
+  {
+    "country": "Kyrgyzstan",
+    "currency": { "code": "KGS", "symbol": "лв" }
+  },
+  {
+    "country": "Laos",
+    "currency": { "code": "LAK", "symbol": "₭" }
+  },
+  {
+    "country": "Latvia",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "Lebanon",
+    "currency": { "code": "LBP", "symbol": "£" }
+  },
+  {
+    "country": "Lesotho",
+    "currency": { "code": "LSL", "symbol": "L" }
+  },
+  {
+    "country": "Liberia",
+    "currency": { "code": "LRD", "symbol": "$" }
+  },
+  {
+    "country": "Libya",
+    "currency": { "code": "LYD", "symbol": "LD" }
+  },
+  {
+    "country": "Liechtenstein",
+    "currency": { "code": "CHF", "symbol": "CHF" }
+  },
+  {
+    "country": "Lithuania",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "Luxembourg",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "Madagascar",
+    "currency": { "code": "MGA", "symbol": "Ar" }
+  },
+  {
+    "country": "Malawi",
+    "currency": { "code": "MWK", "symbol": "MK" }
+  },
+  {
+    "country": "Malaysia",
+    "currency": { "code": "MYR", "symbol": "RM" }
+  },
+  {
+    "country": "Maldives",
+    "currency": { "code": "MVR", "symbol": "Rf" }
+  },
+  {
+    "country": "Mali",
+    "currency": { "code": "XOF", "symbol": "CFA" }
+  },
+  {
+    "country": "Malta",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "Marshall Islands",
+    "currency": { "code": "USD", "symbol": "$" }
+  },
+  {
+    "country": "Mauritania",
+    "currency": { "code": "MRU", "symbol": "UM" }
+  },
+  {
+    "country": "Mauritius",
+    "currency": { "code": "MUR", "symbol": "₨" }
+  },
+  {
+    "country": "Mexico",
+    "currency": { "code": "MXN", "symbol": "$" }
+  },
+  {
+    "country": "Micronesia",
+    "currency": { "code": "USD", "symbol": "$" }
+  },
+  {
+    "country": "Moldova",
+    "currency": { "code": "MDL", "symbol": "L" }
+  },
+  {
+    "country": "Monaco",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "Mongolia",
+    "currency": { "code": "MNT", "symbol": "₮" }
+  },
+  {
+    "country": "Montenegro",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "Morocco",
+    "currency": { "code": "MAD", "symbol": "MAD" }
+  },
+  {
+    "country": "Mozambique",
+    "currency": { "code": "MZN", "symbol": "MT" }
+  },
+  {
+    "country": "Myanmar",
+    "currency": { "code": "MMK", "symbol": "K" }
+  },
+  {
+    "country": "Namibia",
+    "currency": { "code": "NAD", "symbol": "$" }
+  },
+  {
+    "country": "Nauru",
+    "currency": { "code": "AUD", "symbol": "$" }
+  },
+  {
+    "country": "Nepal",
+    "currency": { "code": "NPR", "symbol": "₨" }
+  },
+  {
+    "country": "Netherlands",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "New Zealand",
+    "currency": { "code": "NZD", "symbol": "$" }
+  },
+  {
+    "country": "Nicaragua",
+    "currency": { "code": "NIO", "symbol": "C$" }
+  },
+  {
+    "country": "Niger",
+    "currency": { "code": "XOF", "symbol": "CFA" }
+  },
+  {
+    "country": "Nigeria",
+    "currency": { "code": "NGN", "symbol": "₦" }
+  },
+  {
+    "country": "North Korea",
+    "currency": { "code": "KPW", "symbol": "₩" }
+  },
+  {
+    "country": "North Macedonia",
+    "currency": { "code": "MKD", "symbol": "ден" }
+  },
+  {
+    "country": "Norway",
+    "currency": { "code": "NOK", "symbol": "kr" }
+  },
+  {
+    "country": "Oman",
+    "currency": { "code": "OMR", "symbol": "﷼" }
+  },
+  {
+    "country": "Pakistan",
+    "currency": { "code": "PKR", "symbol": "₨" }
+  },
+  {
+    "country": "Palau",
+    "currency": { "code": "USD", "symbol": "$" }
+  },
+  {
+    "country": "Palestine",
+    "currency": { "code": "ILS", "symbol": "₪" }
+  },
+  {
+    "country": "Panama",
+    "currency": { "code": "PAB", "symbol": "B/." }
+  },
+  {
+    "country": "Papua New Guinea",
+    "currency": { "code": "PGK", "symbol": "K" }
+  },
+  {
+    "country": "Paraguay",
+    "currency": { "code": "PYG", "symbol": "₲" }
+  },
+  {
+    "country": "Peru",
+    "currency": { "code": "PEN", "symbol": "S/." }
+  },
+  {
+    "country": "Philippines",
+    "currency": { "code": "PHP", "symbol": "₱" }
+  },
+  {
+    "country": "Poland",
+    "currency": { "code": "PLN", "symbol": "zł" }
+  },
+  {
+    "country": "Portugal",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "Qatar",
+    "currency": { "code": "QAR", "symbol": "﷼" }
+  },
+  {
+    "country": "Romania",
+    "currency": { "code": "RON", "symbol": "lei" }
+  },
+  {
+    "country": "Russia",
+    "currency": { "code": "RUB", "symbol": "₽" }
+  },
+  {
+    "country": "Rwanda",
+    "currency": { "code": "RWF", "symbol": "R₣" }
+  },
+  {
+    "country": "Saint Kitts and Nevis",
+    "currency": { "code": "XCD", "symbol": "$" }
+  },
+  {
+    "country": "Saint Lucia",
+    "currency": { "code": "XCD", "symbol": "$" }
+  },
+  {
+    "country": "Saint Vincent and the Grenadines",
+    "currency": { "code": "XCD", "symbol": "$" }
+  },
+  {
+    "country": "Samoa",
+    "currency": { "code": "WST", "symbol": "T" }
+  },
+  {
+    "country": "San Marino",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "Sao Tome and Principe",
+    "currency": { "code": "STN", "symbol": "Db" }
+  },
+  {
+    "country": "Saudi Arabia",
+    "currency": { "code": "SAR", "symbol": "﷼" }
+  },
+  {
+    "country": "Senegal",
+    "currency": { "code": "XOF", "symbol": "CFA" }
+  },
+  {
+    "country": "Serbia",
+    "currency": { "code": "RSD", "symbol": "Дин." }
+  },
+  {
+    "country": "Seychelles",
+    "currency": { "code": "SCR", "symbol": "₨" }
+  },
+  {
+    "country": "Sierra Leone",
+    "currency": { "code": "SLL", "symbol": "Le" }
+  },
+  {
+    "country": "Singapore",
+    "currency": { "code": "SGD", "symbol": "$" }
+  },
+  {
+    "country": "Slovakia",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "Slovenia",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "Solomon Islands",
+    "currency": { "code": "SBD", "symbol": "$" }
+  },
+  {
+    "country": "Somalia",
+    "currency": { "code": "SOS", "symbol": "S" }
+  },
+  {
+    "country": "South Africa",
+    "currency": { "code": "ZAR", "symbol": "R" }
+  },
+  {
+    "country": "South Korea",
+    "currency": { "code": "KRW", "symbol": "₩" }
+  },
+  {
+    "country": "South Sudan",
+    "currency": { "code": "SSP", "symbol": "£" }
+  },
+  {
+    "country": "Spain",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "Sri Lanka",
+    "currency": { "code": "LKR", "symbol": "₨" }
+  },
+  {
+    "country": "Sudan",
+    "currency": { "code": "SDG", "symbol": "ج.س." }
+  },
+  {
+    "country": "Suriname",
+    "currency": { "code": "SRD", "symbol": "$" }
+  },
+  {
+    "country": "Sweden",
+    "currency": { "code": "SEK", "symbol": "kr" }
+  },
+  {
+    "country": "Switzerland",
+    "currency": { "code": "CHF", "symbol": "CHF" }
+  },
+  {
+    "country": "Syria",
+    "currency": { "code": "SYP", "symbol": "£" }
+  },
+  {
+    "country": "Taiwan",
+    "currency": { "code": "TWD", "symbol": "NT$" }
+  },
+  {
+    "country": "Tajikistan",
+    "currency": { "code": "TJS", "symbol": "SM" }
+  },
+  {
+    "country": "Tanzania",
+    "currency": { "code": "TZS", "symbol": "TSh" }
+  },
+  {
+    "country": "Thailand",
+    "currency": { "code": "THB", "symbol": "฿" }
+  },
+  {
+    "country": "Timor-Leste",
+    "currency": { "code": "USD", "symbol": "$" }
+  },
+  {
+    "country": "Togo",
+    "currency": { "code": "XOF", "symbol": "CFA" }
+  },
+  {
+    "country": "Tonga",
+    "currency": { "code": "TOP", "symbol": "T$" }
+  },
+  {
+    "country": "Trinidad and Tobago",
+    "currency": { "code": "TTD", "symbol": "TT$" }
+  },
+  {
+    "country": "Tunisia",
+    "currency": { "code": "TND", "symbol": "DT" }
+  },
+  {
+    "country": "Turkey",
+    "currency": { "code": "TRY", "symbol": "₺" }
+  },
+  {
+    "country": "Turkmenistan",
+    "currency": { "code": "TMT", "symbol": "T" }
+  },
+  {
+    "country": "Tuvalu",
+    "currency": { "code": "AUD", "symbol": "$" }
+  },
+  {
+    "country": "Uganda",
+    "currency": { "code": "UGX", "symbol": "USh" }
+  },
+  {
+    "country": "Ukraine",
+    "currency": { "code": "UAH", "symbol": "₴" }
+  },
+  {
+    "country": "United Arab Emirates",
+    "currency": { "code": "AED", "symbol": "د.إ" }
+  },
+  {
+    "country": "United Kingdom",
+    "currency": { "code": "GBP", "symbol": "£" }
+  },
+  {
+    "country": "Uruguay",
+    "currency": { "code": "UYU", "symbol": "$U" }
+  },
+  {
+    "country": "Uzbekistan",
+    "currency": { "code": "UZS", "symbol": "лв" }
+  },
+  {
+    "country": "Vanuatu",
+    "currency": { "code": "VUV", "symbol": "VT" }
+  },
+  {
+    "country": "Vatican City",
+    "currency": { "code": "EUR", "symbol": "€" }
+  },
+  {
+    "country": "Venezuela",
+    "currency": { "code": "VES", "symbol": "Bs.S" }
+  },
+  {
+    "country": "Vietnam",
+    "currency": { "code": "VND", "symbol": "₫" }
+  },
+  {
+    "country": "Yemen",
+    "currency": { "code": "YER", "symbol": "﷼" }
+  },
+  {
+    "country": "Zambia",
+    "currency": { "code": "ZMW", "symbol": "ZK" }
+  },
+  {
+    "country": "Zimbabwe",
+    "currency": { "code": "ZWL", "symbol": "$" }
+  }
+]

@@ -1,0 +1,25 @@
+import { Helmet } from 'react-helmet';
+import ExtractTextFromHTML from '@/tools/text-string/extract-text-from-html';
+
+export default function ExtractTextFromHTMLPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Extract Text from HTML - Text & String Tools | Solvezyo</title>
+        <meta name="description" content="Remove all HTML tags and extract plain text content from HTML code." />
+      </Helmet>
+      <div className="container mx-auto px-4 py-8">
+        <div className="mb-6 text-center">
+          <p className="text-sm text-muted-foreground">Text & String Tools</p>
+          <h1 className="text-4xl font-bold mt-2 bg-gradient-to-r from-gray-600 to-slate-600 bg-clip-text text-transparent">
+            Extract Text from HTML
+          </h1>
+          <p className="text-muted-foreground mt-2">
+            Remove all HTML tags and extract plain text content
+          </p>
+        </div>
+        <ExtractTextFromHTML />
+      </div>
+    </>
+  );
+}
