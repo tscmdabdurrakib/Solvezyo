@@ -97,8 +97,9 @@ The project has been successfully configured for the Replit environment:
 - **Port Configuration**: Dev server runs on port 5000 (required for Replit)
 - **Host Settings**: Configured to use 0.0.0.0 for public access
 - **HMR Configuration**: WebSocket configured for Replit's proxy environment
-- **Build System**: Vite 7.x with optimized chunking for large tool collection
+- **Build System**: Vite 6.4.0 (downgraded from 7.x for pdf-lib compatibility)
 - **Dependencies**: Installed with --legacy-peer-deps due to peer dependency conflicts
+- **Package Compatibility**: @types/node@20.16.11 works with Vite 6
 
 ### Workflow Configuration
 - **Development**: `npm run dev` - Starts Vite dev server on port 5000
@@ -121,3 +122,5 @@ This file is included in the `.gitignore` to prevent sensitive credentials from 
 1. **Production Build Error (Fixed)**: Updated Vite config to use proper `__dirname` resolution for ESM modules
 2. **Peer Dependencies**: Use `npm install --legacy-peer-deps` for installation
 3. **Bundle Size**: Large tool collection results in 3.5MB tools chunk (acceptable for lazy loading)
+4. **Vite 7 Compatibility**: Downgraded from Vite 7 to Vite 6 due to pdf-lib import resolution issues
+5. **Cartographer Warnings**: The replit-cartographer plugin shows warnings in Vite 6, but doesn't affect functionality

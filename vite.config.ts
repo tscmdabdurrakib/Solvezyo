@@ -8,6 +8,7 @@ import { visualizer } from "rollup-plugin-visualizer";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
+
 export default defineConfig({
   base: "/",
   plugins: [
@@ -34,6 +35,14 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"),
       "@shared": path.resolve(__dirname, "shared"),
       "@assets": path.resolve(__dirname, "attached_assets"),
+    },
+    extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json'],
+    mainFields: ['module', 'jsnext:main', 'jsnext', 'main'],
+  },
+  optimizeDeps: {
+    include: ['pdf-lib'],
+    esbuildOptions: {
+      resolveExtensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json'],
     },
   },
   server: {
