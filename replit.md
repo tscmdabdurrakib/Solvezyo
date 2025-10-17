@@ -92,8 +92,22 @@ ToolShaala is a high-performance web platform designed to offer 122+ professiona
 
 ## Development Notes
 
+### Replit Environment Setup (October 17, 2025)
+The project has been successfully configured for the Replit environment:
+- **Port Configuration**: Dev server runs on port 5000 (required for Replit)
+- **Host Settings**: Configured to use 0.0.0.0 for public access
+- **HMR Configuration**: WebSocket configured for Replit's proxy environment
+- **Build System**: Vite 7.x with optimized chunking for large tool collection
+- **Dependencies**: Installed with --legacy-peer-deps due to peer dependency conflicts
+
+### Workflow Configuration
+- **Development**: `npm run dev` - Starts Vite dev server on port 5000
+- **Production Build**: `npm run build` - Creates optimized production bundle
+- **Preview**: `npm run preview` - Serves production build locally
+- **Deployment**: Configured for Replit's autoscale deployment
+
 ### Firebase Configuration
-To connect the application to Firebase, you must create a `.env` file in the `client` directory. This file should contain the following environment variables with your Firebase project credentials:
+To connect the application to Firebase, you must create a `.env` file in the root directory. This file should contain the following environment variables with your Firebase project credentials:
 
 ```
 VITE_FIREBASE_API_KEY="YOUR_API_KEY"
@@ -102,3 +116,8 @@ VITE_FIREBASE_APP_ID="YOUR_APP_ID"
 ```
 
 This file is included in the `.gitignore` to prevent sensitive credentials from being committed to version control.
+
+### Known Issues & Solutions
+1. **Production Build Error (Fixed)**: Updated Vite config to use proper `__dirname` resolution for ESM modules
+2. **Peer Dependencies**: Use `npm install --legacy-peer-deps` for installation
+3. **Bundle Size**: Large tool collection results in 3.5MB tools chunk (acceptable for lazy loading)

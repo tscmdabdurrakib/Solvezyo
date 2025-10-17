@@ -2,8 +2,11 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import themePlugin from "@replit/vite-plugin-shadcn-theme-json";
 import path from "path";
+import { fileURLToPath } from "url";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 import { visualizer } from "rollup-plugin-visualizer";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   base: "/",
@@ -12,10 +15,10 @@ export default defineConfig({
     runtimeErrorOverlay(),
     themePlugin(),
     visualizer({
-      open: true, // Opens the report in your browser
-      filename: "bundle-analysis.html", // Name of the report file
-      gzipSize: true, // Show gzip sizes
-      brotliSize: true, // Show brotli sizes
+      open: false,
+      filename: "bundle-analysis.html",
+      gzipSize: true,
+      brotliSize: true,
     }),
     ...(process.env.NODE_ENV !== "production" &&
     process.env.REPL_ID !== undefined
@@ -28,19 +31,29 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": path.resolve(import.meta.dirname, "src"),
-      "@shared": path.resolve(import.meta.dirname, "shared"),
-      "@assets": path.resolve(import.meta.dirname, "attached_assets"),
+      "@": path.resolve(__dirname, "src"),
+      "@shared": path.resolve(__dirname, "shared"),
+      "@assets": path.resolve(__dirname, "attached_assets"),
     },
   },
   server: {
     host: "0.0.0.0",
-    port: 5173,
-    allowedHosts: [".replit.dev", "localhost"],
+    port: 5000,
+    strictPort: false,
+    hmr: {
+      clientPort: 443,
+      protocol: 'wss'
+    }
+  },
+  preview: {
+    host: "0.0.0.0",
+    port: 5000,
+    strictPort: false,
   },
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist"),
+    outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,
+    sourcemap: false,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -48,9 +61,15 @@ export default defineConfig({
             if (id.includes("react") || id.includes("react-dom")) {
               return "react-vendor";
             }
+            if (id.includes("@radix-ui")) {
+              return "radix-vendor";
+            }
+            if (id.includes("firebase")) {
+              return "firebase-vendor";
+            }
             return "vendor";
           }
-          if (id.includes("src/pages/tools")) {
+          if (id.includes("src/tools")) {
             return "tools";
           }
         },

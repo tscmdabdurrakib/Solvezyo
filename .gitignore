@@ -5,6 +5,13 @@ server/public
 vite.config.ts.*
 *.tar.gz
 # Firebase environment variables
+.env
 client/.env
 # Local Netlify folder
 .netlify
+# Logs
+*.log
+npm-debug.log*
+/tmp/logs/
+# Build analysis
+bundle-analysis.html
