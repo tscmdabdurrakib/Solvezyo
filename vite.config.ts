@@ -67,7 +67,7 @@ export default defineConfig({
       output: {
         manualChunks: (id) => {
           if (id.includes("node_modules")) {
-            if (id.includes("react") || id.includes("react-dom")) {
+            if (id.includes("node_modules/react/") || id.includes("node_modules/react-dom/")) {
               return "react-vendor";
             }
             if (id.includes("@radix-ui")) {
@@ -75,6 +75,9 @@ export default defineConfig({
             }
             if (id.includes("firebase")) {
               return "firebase-vendor";
+            }
+            if (id.includes("chart.js") || id.includes("recharts")) {
+              return "charts-vendor";
             }
             return "vendor";
           }
