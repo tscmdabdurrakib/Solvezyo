@@ -66,21 +66,6 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          if (id.includes("node_modules")) {
-            if (id.includes("node_modules/react/") || id.includes("node_modules/react-dom/")) {
-              return "react-vendor";
-            }
-            if (id.includes("@radix-ui")) {
-              return "radix-vendor";
-            }
-            if (id.includes("firebase")) {
-              return "firebase-vendor";
-            }
-            if (id.includes("chart.js") || id.includes("recharts")) {
-              return "charts-vendor";
-            }
-            return "vendor";
-          }
           if (id.includes("src/tools")) {
             return "tools";
           }
