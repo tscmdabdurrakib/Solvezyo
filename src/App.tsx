@@ -40,6 +40,10 @@ const FavoriteToolsPage = lazy(() => import("@/pages/FavoriteToolsPage"));
 const BlogPage = lazy(() => import("@/pages/BlogPage"));
 const BlogSinglePage = lazy(() => import("@/pages/BlogSinglePage"));
 const ChangelogPage = lazy(() => import("@/pages/ChangelogPage"));
+const RoadmapHomePage = lazy(() => import("@/pages/RoadmapHomePage"));
+const GenericRoadmapPage = lazy(() => import("@/pages/roadmaps/GenericRoadmapPage"));
+const ToolDetailPage = lazy(() => import("@/pages/LaunchPad/index").then(module => ({ default: module.ToolDetailPageWrapper })));
+const LaunchPadPage = lazy(() => import("@/pages/LaunchPad/index").then(module => ({ default: module.LaunchPadPage })));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import("@/pages/PrivacyPolicyPage"));
@@ -734,6 +738,10 @@ function AppRouter() {
             <Route path="/blog" component={BlogPage} />
             <Route path="/blog/:id" component={BlogSinglePage} />
             <Route path="/changelog" component={ChangelogPage} />
+            <Route path="/roadmaps" component={RoadmapHomePage} />
+            <Route path="/roadmaps/:id" component={GenericRoadmapPage} />
+            <Route path="/launchpad" component={LaunchPadPage} />
+            <Route path="/launchpad/:id" component={ToolDetailPage} />
             <Route path="/privacy" component={PrivacyPolicyPage} />
             <Route path="/terms" component={TermsOfServicePage} />
             <Route path="/disclaimer" component={DisclaimerPage} />
@@ -1398,7 +1406,8 @@ function AppRouter() {
             <Route path="/tools/marriage-tax-calculator" component={MarriageTaxCalculatorPage} />
             <Route path="/tools/estate-tax-calculator" component={EstateTaxCalculatorPage} />
             <Route path="/tools/retirement-savings-pension-calculator" component={RetirementSavingsPensionCalculatorPage} />
-            
+
+
             {/* Authentication Pages */}
             <Route path="/login" component={LoginPage} />
             <Route path="/signup" component={SignupPage} />

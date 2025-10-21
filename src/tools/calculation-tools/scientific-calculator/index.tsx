@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Parser } from 'expr-eval';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Copy, Delete, RefreshCw, Calculator } from 'lucide-react';
@@ -46,20 +47,16 @@ export function ScientificCalculator() {
   const handleCalculate = () => {
     try {
       // Replace functions for evaluation
-      let expr = display
+      // Replace user-friendly symbols with standard operators
+      const expr = display
         .replace(/×/g, '*')
         .replace(/÷/g, '/')
-        .replace(/sin/g, 'Math.sin')
-        .replace(/cos/g, 'Math.cos')
-        .replace(/tan/g, 'Math.tan')
-        .replace(/log/g, 'Math.log10')
-        .replace(/ln/g, 'Math.log')
-        .replace(/√/g, 'Math.sqrt')
-        .replace(/π/g, 'Math.PI')
-        .replace(/e(?![0-9])/g, 'Math.E');
+        .replace(/√/g, 'sqrt')
+        .replace(/π/g, 'pi');
 
-      // Evaluate the expression
-      const result = eval(expr);
+      // Use the 'expr-eval' parser to safely evaluate the expression
+      const parser = new Parser();
+      const result = parser.evaluate(expr);
       
       setEquation(display + ' =');
       setDisplay(result.toString());

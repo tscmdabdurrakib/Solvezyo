@@ -12,6 +12,7 @@ const CategoryCard = lazy(() => import('@/components/CategoryCard').then(module 
 const ToolCard = lazy(() => import('@/components/ToolCard').then(module => ({ default: module.ToolCard })));
 const Newsletter = lazy(() => import('@/components/Newsletter').then(module => ({ default: module.Newsletter })));
 const SearchBar = lazy(() => import('@/components/SearchBar').then(module => ({ default: module.SearchBar })));
+const SearchBarFallback = lazy(() => import('@/components/SearchBarFallback').then(module => ({ default: module.SearchBarFallback })));
 
 // A generic loader for suspended components
 const ComponentLoader = () => (
@@ -146,7 +147,7 @@ export default function Home() {
     <main className="container mx-auto px-4 md:px-6 py-8">
       {/* Hero Section */}
       <motion.section 
-        className="text-center mb-12"
+        className="text-center mb-12 min-h-[300px]"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -157,7 +158,7 @@ export default function Home() {
         </p>
 
         <div className="mt-8 max-w-xl mx-auto">
-          <Suspense fallback={<div>Loading Search...</div>}>
+          <Suspense fallback={<SearchBarFallback />}>
             <SearchBar variant="input" />
           </Suspense>
         </div>
@@ -369,9 +370,11 @@ export default function Home() {
                   {blog.image && (
                     <img 
                       src={blog.image} 
-                      alt={blog.title || "Blog image"} 
-                      className="w-full h-48 object-cover" 
-                      loading="lazy" 
+                      alt={blog.title || "Blog image"}
+                      className="w-full h-48 object-cover"
+                      width="384"
+                      height="192"
+                      loading="lazy"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.style.display = 'none';
@@ -390,20 +393,18 @@ export default function Home() {
         </Suspense>
       </LazyLoadOnView>
       
-      <LazyLoadOnView>
-        <Suspense fallback={<ComponentLoader />}>
-          {/* Newsletter Section */}
-          <motion.section
-            className="mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            <Newsletter />
-          </motion.section>
-        </Suspense>
-      </LazyLoadOnView>
+      <Suspense fallback={<ComponentLoader />}>
+        {/* Newsletter Section */}
+        <motion.section
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <Newsletter />
+        </motion.section>
+      </Suspense>
     </main>
   );
 }

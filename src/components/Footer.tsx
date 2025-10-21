@@ -7,9 +7,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           <div className="lg:col-span-2">
               <div className="flex items-center space-x-3">
-          <img src="/logo.png" alt="Solvezyo logo" className="h-8 w-8" />
-          <Link href="/" className="text-xl font-bold cursor-pointer bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Solvezyo
+          <img src="/logo.png" alt="Solvezyo logo" className="h-8 w-8" width="32" height="32" />
+          <Link href="/" className="text-xl font-bold cursor-pointer text-gray-800 dark:text-gray-200 font-semibold">
+            SOLVEZYO
           </Link>
         </div>
             <p className="text-muted-foreground text-sm mb-6">

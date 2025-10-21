@@ -11,7 +11,7 @@ import {
 import { cn } from "@/lib/utils";
 import { categories } from '@/data/categories';
 import { tools } from '@/data/tools';
-import { ChevronUp, ChevronRight, Info, LayoutGrid } from 'lucide-react';
+import { ChevronUp, ChevronRight, Info, LayoutGrid, Map } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from './ui/button';
 import { useFavorites } from '@/context/FavoritesContext';
@@ -122,6 +122,44 @@ export function MainNavigationMenu() {
              )}
            </span>
          </button>
+
+         {/* Others Dropdown */}
+         <div className="relative">
+           <button className="nav-dropdown-trigger nav-btn flex items-center px-4 py-2 text-sm font-medium transition-colors rounded-md hover:bg-secondary/60">
+             <Map className="w-4 h-4 mr-1.5 text-primary" />
+             Others
+             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+               <path d="m6 9 6 6 6-6"/>
+             </svg>
+           </button>
+           <div className="nav-dropdown absolute left-0 z-50 w-56 p-2 mt-1 bg-popover shadow-lg rounded-xl border border-border">
+             <div
+               onClick={() => setLocation(`/roadmaps`)}
+               className={cn(
+                 "flex items-center justify-between p-3 rounded-lg cursor-pointer",
+                 "bg-card hover:bg-secondary/70 transition-colors hover:shadow-md"
+               )}
+             >
+               <div className="flex items-center">
+                 <span className="font-medium">Roadmaps</span>
+               </div>
+             </div>
+         
+             {/* Add LaunchPad Link */}
+             <div
+               onClick={() => setLocation(`/launchpad`)}
+               className={cn(
+                 "flex items-center justify-between p-3 rounded-lg cursor-pointer",
+                 "bg-card hover:bg-secondary/70 transition-colors hover:shadow-md"
+               )}
+             >
+               <div className="flex items-center">
+                 <span className="font-medium">LaunchPad</span>
+               </div>
+             </div>
+             
+           </div>
+         </div>
        </div>
      </div>
 
