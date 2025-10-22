@@ -34,7 +34,7 @@ export function Header() {
     <header className="sticky top-0 z-50 backdrop-blur-md bg-background/90 border-b border-border">
       <div className="container mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-3">
-          <img src="./logo.png" alt="Solvezyo logo" className="h-8 w-8" />
+          <img src="/logo.png" alt="Solvezyo logo" className="h-8 w-8" />
           <Link href="/" className="text-xl font-bold cursor-pointer text-gray-800 dark:text-gray-200 font-semibold">
             SOLVEZYO
           </Link>

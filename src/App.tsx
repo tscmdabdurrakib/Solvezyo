@@ -52,6 +52,12 @@ const DisclaimerPage = lazy(() => import("@/pages/DisclaimerPage"));
 const DMCAPolicyPage = lazy(() => import("@/pages/DMCAPolicyPage"));
 const SitemapPage = lazy(() => import("@/pages/SitemapPage"));
 
+// Prompt pages
+const PromptHomePage = lazy(() => import("@/pages/prompt/PromptHomePage"));
+const PromptsPage = lazy(() => import("@/pages/prompt/PromptsPage"));
+const SubmitPromptPage = lazy(() => import("@/pages/prompt/SubmitPromptPage"));
+const PromptDetailPage = lazy(() => import("@/pages/prompt/PromptDetailPage"));
+
 // Tool pages - lazy loaded
 const LengthConverterPage = lazy(() => import("@/pages/tools/LengthConverterPage"));
 const WeightMassConverterPage = lazy(() => import("@/pages/tools/WeightMassConverterPage"));
@@ -747,6 +753,10 @@ function AppRouter() {
             <Route path="/disclaimer" component={DisclaimerPage} />
             <Route path="/dmca" component={DMCAPolicyPage} />
             <Route path="/sitemap" component={SitemapPage} />
+            <Route path="/prompt" component={PromptHomePage} />
+            <Route path="/prompt/browse" component={PromptsPage} />
+            <Route path="/prompt/submit" component={SubmitPromptPage} />
+            <Route path="/prompt/:id" component={PromptDetailPage} />
             <Route path="/tools/length-converter" component={LengthConverterPage} />
             <Route path="/tools/weight-mass-converter" component={WeightMassConverterPage} />
             <Route path="/tools/volume-converter" component={VolumeConverterPage} />

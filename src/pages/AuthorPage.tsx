@@ -79,7 +79,7 @@ export default function AuthorPage() {
                   {/* Placeholder Profile Image - Replace with actual image later */}
                   <div className="aspect-square bg-muted relative overflow-hidden">
                     <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-                      <svg
+                      {/* <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="80"
                         height="80"
@@ -92,10 +92,10 @@ export default function AuthorPage() {
                       >
                         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
                         <circle cx="12" cy="7" r="4" />
-                      </svg>
+                      </svg> */}
                     </div>
                     {/* Uncomment and use the following line when you have an actual image */}
-                    {/* <img src="/path/to/profile-image.jpg" alt="Md Abdur Rakib" className="w-full h-full object-cover" /> */}
+                    <img src="/mdabdurrakib_profile_photo.jpg" alt="Md Abdur Rakib" className="w-full h-full object-cover" />
                   </div>
                 </CardContent>
               </Card>
@@ -108,17 +108,17 @@ export default function AuthorPage() {
                 <div className="flex justify-center space-x-3 mt-4">
                   {/* Social Media Links - Replace href with actual links */}
                   <Button variant="outline" size="icon" asChild className="rounded-full">
-                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <a href="https://github.com/tscmdabdurrakib" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                       <Github className="h-4 w-4" />
                     </a>
                   </Button>
                   <Button variant="outline" size="icon" asChild className="rounded-full">
-                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/tscmdabdurrakib/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                       <Linkedin className="h-4 w-4" />
                     </a>
                   </Button>
                   <Button variant="outline" size="icon" asChild className="rounded-full">
-                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <a href="https://facebook.com/mrtmdabdurrakib" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                       <Facebook className="h-4 w-4" />
                     </a>
                   </Button>
@@ -132,11 +132,11 @@ export default function AuthorPage() {
                 <div className="space-y-2 pt-3">
                   <div className="flex items-center text-sm text-muted-foreground">
                     <Mail className="mr-2 h-4 w-4" />
-                    <span>contact@example.com</span>
+                    <span>support@solvezyo.com</span>
                   </div>
                   <div className="flex items-center text-sm text-muted-foreground">
                     <Globe className="mr-2 h-4 w-4" />
-                    <span>www.example.com</span>
+                    <span>www.mdabdurrakib.com</span>
                   </div>
                   <div className="flex items-center text-sm text-muted-foreground">
                     <MapPin className="mr-2 h-4 w-4" />
@@ -151,7 +151,7 @@ export default function AuthorPage() {
               <Card>
                 <CardContent className="p-6">
                   <div className="space-y-4">
-                    <h3 className="text-xl font-semibold">The Journey Behind All-in-One Tools</h3>
+                    <h3 className="text-xl font-semibold">The Journey Behind Solvezyo</h3>
                     
                     <p className="text-muted-foreground">
                       As a passionate web developer and digital marketer with over 5 years of experience, 
@@ -161,7 +161,7 @@ export default function AuthorPage() {
                     </p>
                     
                     <p className="text-muted-foreground">
-                      That's when the idea for this All-in-One Tools website was born. Starting in early 2023, 
+                      That's when the idea for this Solvezyo Tools website was born. Starting in early 2023, 
                       I embarked on the journey to create a comprehensive platform that would bring together all 
                       the essential tools that developers, marketers, students, and everyday users need. The goal 
                       was simple yet ambitious: to build a one-stop destination that eliminates the need to hop 

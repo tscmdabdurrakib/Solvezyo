@@ -158,6 +158,19 @@ export function MainNavigationMenu() {
                </div>
              </div>
              
+             {/* Add Prompt Link */}
+             <div
+               onClick={() => setLocation(`/prompt`)}
+               className={cn(
+                 "flex items-center justify-between p-3 rounded-lg cursor-pointer",
+                 "bg-card hover:bg-secondary/70 transition-colors hover:shadow-md"
+               )}
+             >
+               <div className="flex items-center">
+                 <span className="font-medium">Prompt</span>
+               </div>
+             </div>
+             
            </div>
          </div>
        </div>

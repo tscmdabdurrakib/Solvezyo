@@ -163,8 +163,8 @@ export default function ContactPage() {
                             </FormLabel>
                             <FormControl>
                               <Input 
-                                placeholder="your.email@example.com" 
-                                type="email" 
+                                placeholder="your.email@solvezyo.com" 
+                                type="email"
                                 {...field} 
                                 className="h-12 focus-visible:ring-primary/50 transition-all"
                               />
@@ -301,10 +301,10 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-medium mb-1">Email Us</h3>
                       <a 
-                        href="mailto:contact@toolhub.com" 
+                        href="mailto:support@solvezyo.com" 
                         className="text-primary hover:underline transition-colors flex items-center gap-1"
                       >
-                        contact@toolhub.com
+                        support@solvezyo.com
                         <ExternalLink className="h-3 w-3" />
                       </a>
                     </div>
@@ -320,10 +320,10 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-medium mb-1">Call Us</h3>
                       <a 
-                        href="tel:+15555555555" 
+                        href="tel:+8801752811171" 
                         className="text-primary hover:underline transition-colors flex items-center gap-1"
                       >
-                        +1 (555) 555-5555
+                        +880 (17) 528-111-71
                         <ExternalLink className="h-3 w-3" />
                       </a>
                     </div>
@@ -339,9 +339,9 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-medium mb-1">Visit Us</h3>
                       <address className="not-italic text-muted-foreground leading-relaxed">
-                        600 Montgomery St<br />
-                        San Francisco, CA 94111<br />
-                        United States
+                        1612 South Salna - Salna Bazar<br />
+                       Sadar Gazipur - 1702 <br />
+                       Dhaka Bangladesh
                       </address>
                     </div>
                   </div>
@@ -357,11 +357,11 @@ export default function ContactPage() {
                       <h3 className="font-medium mb-1">Office Hours</h3>
                       <div className="text-muted-foreground text-sm">
                         <div className="grid grid-cols-2 gap-2">
-                          <div>Monday - Friday</div>
+                          <div>Sunday - Thursday</div>
                           <div>9:00 AM - 6:00 PM</div>
                           <div>Saturday</div>
                           <div>10:00 AM - 4:00 PM</div>
-                          <div>Sunday</div>
+                          <div>Friday</div>
                           <div>Closed</div>
                         </div>
                       </div>

@@ -1,0 +1,62 @@
+/* Custom styles for prompt components */
+
+.prompt-card {
+  transition: all 0.3s ease;
+}
+
+.prompt-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.prompt-card-compact {
+  cursor: pointer;
+}
+
+.prompt-card-compact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Animation for prompt cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.prompt-fade-in {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Custom scrollbar for prompt lists */
+.prompt-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.prompt-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.prompt-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.prompt-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode scrollbar */
+.dark .prompt-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark .prompt-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
