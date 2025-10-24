@@ -58,6 +58,9 @@ const PromptsPage = lazy(() => import("@/pages/prompt/PromptsPage"));
 const SubmitPromptPage = lazy(() => import("@/pages/prompt/SubmitPromptPage"));
 const PromptDetailPage = lazy(() => import("@/pages/prompt/PromptDetailPage"));
 
+// Code Learning Platform
+const CodeLearningLayout = lazy(() => import("./pages/codelearning/index").then(module => ({ default: module.default })));
+
 // Tool pages - lazy loaded
 const LengthConverterPage = lazy(() => import("@/pages/tools/LengthConverterPage"));
 const WeightMassConverterPage = lazy(() => import("@/pages/tools/WeightMassConverterPage"));
@@ -757,6 +760,7 @@ function AppRouter() {
             <Route path="/prompt/browse" component={PromptsPage} />
             <Route path="/prompt/submit" component={SubmitPromptPage} />
             <Route path="/prompt/:id" component={PromptDetailPage} />
+            <Route path="/learn/*" component={CodeLearningLayout} />
             <Route path="/tools/length-converter" component={LengthConverterPage} />
             <Route path="/tools/weight-mass-converter" component={WeightMassConverterPage} />
             <Route path="/tools/volume-converter" component={VolumeConverterPage} />

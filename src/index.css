@@ -112,3 +112,6 @@ input[type="search"]::-webkit-search-results-decoration {
   background-size: 100% 100%;
   filter: blur(0.3px);
 }
+
+/* Import Code Learning Platform Styles */
+@import './pages/codelearning/styles/codelearning.css';
